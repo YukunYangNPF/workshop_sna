@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Networks are everywhere &#8212; NPF SNA Workshop</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/npf-favicon.jpg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to define a network?" href="sna_cp2.html" />
+    <link rel="prev" title="What are networks?" href="content.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/1.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NPF SNA Workshop</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="content.html">
+   What are networks?
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Networks are everywhere
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp2.html">
+     How to define a network?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp3.html">
+     Using network analysis for your research
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="des_nw.html">
+   Descriptive Network Analysis
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_ch4.html">
+     Summarizing a Network
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_node.html">
+     Describing a node
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_model.html">
+     Modelling Networks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prac.html">
+   Practical Session: Analyzing NPF Bonusly Network
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/sna_cp1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-informal-definition-of-network">
+   An
+   <em>
+    informal
+   </em>
+   definition of Network
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="networks-are-everywhere">
+<h1>Networks are everywhere<a class="headerlink" href="#networks-are-everywhere" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image" src="https://lh3.googleusercontent.com/proxy/_vaxh5tsPhMUZe_aOfgFig7aLEcm4t8RdgkTleFQYyttH7NpdnhypaB1hIGysVs6UJiI0NE1RYf_Nc1GD-KYmKRFrUpwjxduiEwNMwUdxrIdRtgC4TYQ_DrBRY_a4A1mdO6MQadS6QbcHXRy5CmhWw3XiYzCxYKVhl7QqJlZKa0P9GG7Dg" /></p>
+<div class="section" id="an-informal-definition-of-network">
+<h2>An <em>informal</em> definition of Network<a class="headerlink" href="#an-informal-definition-of-network" title="Permalink to this headline">¶</a></h2>
+<blockquote class="epigraph">
+<div><p>Anything that is <strong>connected</strong> can be modeled as a network.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Real-life social networks</p></li>
+</ul>
+<div class="figure align-default" id="real-life">
+<a class="reference internal image-reference" href="_images/Zachary's_karate_club.png"><img alt="_images/Zachary's_karate_club.png" src="_images/Zachary's_karate_club.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Zachary, W. W. (1977). An information flow model for conflict and fission in small groups. Journal of anthropological research, 33(4), 452-473.</span><a class="headerlink" href="#real-life" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Online social networks</p></li>
+</ul>
+<div class="figure align-default" id="twitter">
+<a class="reference internal image-reference" href="_images/twitter_polar.png"><img alt="_images/twitter_polar.png" src="_images/twitter_polar.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Conover, M., Ratkiewicz, J., Francisco, M., Gonçalves, B., Menczer, F., &amp; Flammini, A. (2011, July). Political polarization on twitter. In Proceedings of the International AAAI Conference on Web and Social Media (Vol. 5, No. 1).</span><a class="headerlink" href="#twitter" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Often what comes to our minds about networks are social networks. However, in reality, the application of networks can be broader!</p>
+</div>
+<p><strong>What about other non-human living things?</strong></p>
+<ul class="simple">
+<li><p>Protein-protein interaction networks</p></li>
+</ul>
+<div class="figure align-default" id="protine">
+<a class="reference internal image-reference" href="_images/protein.png"><img alt="_images/protein.png" src="_images/protein.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Jeong, H., Mason, S. P., Barabási, A. L., &amp; Oltvai, Z. N. (2001). Lethality and centrality in protein networks. Nature, 411(6833), 41-42.
+bash: syntax error near unexpected token `(‘
+Yukuns-MacBook-Pro:sna yukun$ Rual, J. F., Venkatesan, K., Hao, T., Hirozane-Kishikawa, T., Dricot, A., Li, N., … &amp; Vidal, M. (2005). Towards a proteome-scale map of the human protein–protein interaction network. Nature, 437(7062), 1173-1178.</span><a class="headerlink" href="#protine" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Ecological Network</p></li>
+</ul>
+<div class="figure align-default" id="ecology">
+<a class="reference internal image-reference" href="_images/foodweb.jpg"><img alt="_images/foodweb.jpg" src="_images/foodweb.jpg" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Tamaddoni-Nezhad, A., Milani, G. A., Raybould, A., Muggleton, S., &amp; Bohan, D. A. (2013). Construction and validation of food webs using logic-based machine learning and text mining. Advances in Ecological Research, 49, 225-289.</span><a class="headerlink" href="#ecology" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>None-living things can be modeled as networks as well:</strong></p>
+<ul class="simple">
+<li><p>Economic Networks</p></li>
+</ul>
+<div class="figure align-default" id="economic">
+<a class="reference internal image-reference" href="_images/financial_networks.png"><img alt="_images/financial_networks.png" src="_images/financial_networks.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Elliott, Matthew, Benjamin Golub, and Matthew O. Jackson. “Financial networks and contagion.” American Economic Review 104.10 (2014): 3115-53.</span><a class="headerlink" href="#economic" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Trade Networks</p></li>
+</ul>
+<div class="figure align-default" id="trade">
+<a class="reference internal image-reference" href="_images/trade.png"><img alt="_images/trade.png" src="_images/trade.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Dastkhan, H., &amp; Gharneh, N. S. (2018). How the ownership structures cause epidemics in financial markets: A network-based simulation model. Physica A: Statistical Mechanics and its Applications, 492, 324-342.</span><a class="headerlink" href="#trade" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Transportation Networks</p></li>
+</ul>
+<div class="figure align-default" id="transport">
+<a class="reference internal image-reference" href="_images/airport.jpg"><img alt="_images/airport.jpg" src="_images/airport.jpg" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Sun, X., Gollnick, V., &amp; Wandelt, S. (2017). Robustness analysis metrics for worldwide airport network: A comprehensive study. Chinese Journal of Aeronautics, 30(2), 500-512.</span><a class="headerlink" href="#transport" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Citation Networks</p></li>
+</ul>
+<div class="figure align-default" id="co-cite">
+<a class="reference internal image-reference" href="_images/patent.png"><img alt="_images/patent.png" src="_images/patent.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Li, X., Chen, H., Huang, Z., &amp; Roco, M. C. (2007). Patent citation network in nanotechnology (1976–2004). Journal of Nanoparticle Research, 9(3), 337-352.</span><a class="headerlink" href="#co-cite" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Abstract things can be modeled as network too:</strong></p>
+<ul class="simple">
+<li><p>Keyword Networks</p></li>
+</ul>
+<div class="figure align-default" id="keyword">
+<a class="reference internal image-reference" href="_images/keyword.jpeg"><img alt="_images/keyword.jpeg" src="_images/keyword.jpeg" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Kayir, S., &amp; Kisa, A. (2021). The evolution of the regional anesthesia: a holistic investigation of global outputs with bibliometric analysis between 1980-2019. The Korean Journal of Pain, 34(1), 82.</span><a class="headerlink" href="#keyword" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Semantic Networks</p></li>
+</ul>
+<div class="figure align-default" id="semantic">
+<a class="reference internal image-reference" href="_images/sementic.jpeg"><img alt="_images/sementic.jpeg" src="_images/sementic.jpeg" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Kang, G. J., Ewing-Nelson, S. R., Mackey, L., Schlitt, J. T., Marathe, A., Abbas, K. M., &amp; Swarup, S. (2017). Semantic network analysis of vaccine sentiment in online social media. Vaccine, 35(29), 3621-3638.</span><a class="headerlink" href="#semantic" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Emoji Network</p></li>
+</ul>
+<div class="figure align-default" id="emoji">
+<a class="reference internal image-reference" href="_images/emoji.png"><img alt="_images/emoji.png" src="_images/emoji.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Ai, W., Lu, X., Liu, X., Wang, N., Huang, G., &amp; Mei, Q. (2017, April). Untangling emoji popularity through semantic embeddings. In Proceedings of the International AAAI Conference on Web and Social Media (Vol. 11, No. 1).
+(Visualization can be accessed via <a class="reference external" href="https://emojicloud3d.herokuapp.com/">https://emojicloud3d.herokuapp.com/</a>)</span><a class="headerlink" href="#emoji" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>What are some examples of networks being used in policing research?</strong></p>
+<ul class="simple">
+<li><p>Crime Networks</p></li>
+</ul>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/crime.png"><img alt="_images/crime.png" src="_images/crime.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Duijn, P. A., &amp; Klerks, P. P. (2014). Social network analysis applied to criminal networks: recent developments in Dutch law enforcement. Networks and network analysis for defence and security, 121-159.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Social transmission of police misconduct</p></li>
+</ul>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/transmission.png"><img alt="_images/transmission.png" src="_images/transmission.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Ouellet, M., Hashimi, S., Gravel, J., &amp; Papachristos, A. V. (2019). Network exposure and excessive use of force: Investigating the social transmission of police misconduct. Criminology &amp; Public Policy, 18(3), 675-704.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>…</p></li>
+</ul>
+<p>What else can you think of?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="content.html" title="previous page">What are networks?</a>
+    <a class='right-next' id="next-link" href="sna_cp2.html" title="next page">How to define a network?</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Yukun<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

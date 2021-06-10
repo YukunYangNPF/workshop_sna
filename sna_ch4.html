@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Summarizing a network &#8212; NPF SNA Workshop</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/npf-favicon.jpg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Describing a node" href="sna_node.html" />
+    <link rel="prev" title="Descriptive Network Analysis" href="des_nw.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/1.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NPF SNA Workshop</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="content.html">
+   What are networks?
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp1.html">
+     Networks are everywhere
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp2.html">
+     How to define a network?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp3.html">
+     Using network analysis for your research
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="des_nw.html">
+   Descriptive Network Analysis
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Summarizing a network
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_node.html">
+     Describing a node
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_model.html">
+     Network models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prac.html">
+   Practical Session: Analyzing NPF Bonusly Network
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/sna_ch4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics-from-graph-theory">
+   Basics from Graph Theory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diameter-average-path-length">
+   Diameter &amp; Average Path Length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#density">
+   Density
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connected-network-components">
+   Connected Network &amp; Components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connectivity">
+     Connectivity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homophily">
+   Homophily
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strength-of-weak-ties">
+     Strength of Weak Ties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assortativity">
+     Assortativity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#local-structures">
+   Local Structures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clustering">
+     Clustering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#triads">
+     Triads
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#triadic-closure">
+       Triadic Closure
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transitivity">
+       Transitivity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cliques">
+     Cliques
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#maximal-cliques">
+       Maximal Cliques
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motifs">
+     Motifs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#triad-motifs">
+       Triad Motifs
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="summarizing-a-network">
+<h1>Summarizing a network<a class="headerlink" href="#summarizing-a-network" title="Permalink to this headline">¶</a></h1>
+<p><img alt="word-net" src="http://2.bp.blogspot.com/-loCreSlUoec/TlsL5W4L_zI/AAAAAAAAAnY/gCbivQf7BMc/s1600/data%2Bviz.jpg" /></p>
+<div class="section" id="basics-from-graph-theory">
+<h2>Basics from Graph Theory<a class="headerlink" href="#basics-from-graph-theory" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><em>Walk</em> is a sequence of nodes and a sequence of edges that joins two nodes. A walk from <span class="math notranslate nohighlight">\(i_j\)</span> to <span class="math notranslate nohighlight">\(i_k\)</span> is a sequene of nodes (<span class="math notranslate nohighlight">\(i_j\)</span>, <span class="math notranslate nohighlight">\(i_j+1\)</span>, …,<span class="math notranslate nohighlight">\(i_k\)</span>), and a sequence of edges (<span class="math notranslate nohighlight">\(i_j\)</span><span class="math notranslate nohighlight">\(i_{j+1}\)</span>, <span class="math notranslate nohighlight">\(i_{j+1}\)</span><span class="math notranslate nohighlight">\(i_{j+2}\)</span>, …, <span class="math notranslate nohighlight">\(i_{k-1}\)</span><span class="math notranslate nohighlight">\(i_{k}\)</span>). Usually, we can just use a list of nodes to describe the sequence.</p>
+<p class="card-text"><em>Path</em> is a walk that each node is distinct. It just basically means that you can not cycle back.</p>
+<p class="card-text"><em>Cycle</em> is a walk where the first node is the last node. We end up with the starting node.</p>
+<p class="card-text"><em>Geodesic</em> is the <em>shortest path</em> between nodes. It means that you calculate how many links are in all possible paths between two nodes and pick the one with the fewest number of links (for an unweighted graph).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="figure align-default" id="path">
+<a class="reference internal image-reference" href="_images/path_waks.jpeg"><img alt="_images/path_waks.jpeg" src="_images/path_waks.jpeg" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Walk, Path, Cycle, &amp; Shortest Path</span><a class="headerlink" href="#path" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="diameter-average-path-length">
+<h2>Diameter &amp; Average Path Length<a class="headerlink" href="#diameter-average-path-length" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The diameter of a graph is the length of the <em>longest geodesic</em> (i.e., the longest shortest path) between any pairs of nodes.</p>
+</div></blockquote>
+<p>It describes how close nodes are to each other.</p>
+<ul class="simple">
+<li><p>How long will it take to get from one node to another in some sense</p></li>
+<li><p>How fast will information spread?</p></li>
+<li><p>How quickly can we get from one part of the graph to another</p></li>
+</ul>
+<blockquote>
+<div><p>Average Path Length is the average geodesic in the network (less prone to outliers).</p>
+</div></blockquote>
+<p>Looking at social networks in the real world is that they tend to have short average path lengths and short diameters:</p>
+<ul class="simple">
+<li><p>Milgram (1967) letter experiments
+– median 5 for the 25% that made it</p></li>
+<li><p>Co‐Authorship studies
+– Grossman (2002) Math mean 7.6, max 27,
+– Newman (2001) Physics mean 5.9, max 20
+– Goyal et al (2004) Economics mean 9.5, max 29</p></li>
+<li><p>WWW
+– Adamic, Pitkow (1999) – mean 3.1 (85.4% possible of 50M pages)</p></li>
+<li><p>Facebook
+– Backstrom et al (2012) – mean 4.74 (721 million users)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Global network properties on resilience: the largest connected component, the average shortage path length (APL), diameter (D), clustering coefficient (CC), BC, etc. Lower APL and higher CC are typically considered indicators of the small-world-ness property and are sometimes associated with higher resilience.</p>
+</div>
+</div>
+<div class="section" id="density">
+<h2>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The density  of a graph is a measure of how many ties between nodes exist compared to how many edges between nodes are possible, given the graph size (number of nodes) and the graph order (number of links)
+<span class="math notranslate nohighlight">\(d={2m \over (n)(n-1)}\)</span></p>
+</div></blockquote>
+<p>Denser networks are less vulnerable to disruption due to the removal of key nodes.</p>
+</div>
+<div class="section" id="connected-network-components">
+<h2>Connected Network &amp; Components<a class="headerlink" href="#connected-network-components" title="Permalink to this headline">¶</a></h2>
+<p>A network is connected if there is a path between every two nodes.</p>
+<p>Component is a maximum connected subgraph. Assume <span class="math notranslate nohighlight">\(G= (N, E)\)</span> is a network, then the component of G must satisfy the following rules:</p>
+<ul class="simple">
+<li><p>(<span class="math notranslate nohighlight">\(N', E' \)</span>) must be a subset of <span class="math notranslate nohighlight">\((N, E)\)</span></p></li>
+<li><p>(<span class="math notranslate nohighlight">\(N', E' \)</span>) must be connected</p></li>
+<li><p><span class="math notranslate nohighlight">\(i\)</span> in <span class="math notranslate nohighlight">\(N'\)</span> and <span class="math notranslate nohighlight">\(ij\)</span> in E must imply <span class="math notranslate nohighlight">\(j\)</span> in <span class="math notranslate nohighlight">\(N'\)</span> and <span class="math notranslate nohighlight">\(ij\)</span> in <span class="math notranslate nohighlight">\(E'\)</span></p></li>
+</ul>
+<div class="figure align-default" id="com">
+<a class="reference internal image-reference" href="_images/component.png"><img alt="_images/component.png" src="_images/component.png" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">How many components are there in this graph?</span><a class="headerlink" href="#com" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="connectivity">
+<h3>Connectivity<a class="headerlink" href="#connectivity" title="Permalink to this headline">¶</a></h3>
+<p>Connectivity minimum number of nodes that need to be removed to separate the remaining nodes into two or more components. How hard it is to disconnect a graph by removing vertices or edges.</p>
+<p>By Menger’s theorem, this is equal to the number of node independent paths (paths that share no nodes other than source and target</p>
+</div>
+</div>
+<div class="section" id="homophily">
+<h2>Homophily<a class="headerlink" href="#homophily" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>“Birds of a feather flock together”</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>age, race, gender, religion, profession…</p></li>
+<li><p>opportunity – contact theory</p></li>
+<li><p>benefits/costs</p></li>
+<li><p>social pressure</p></li>
+<li><p>social competition…</p></li>
+</ul>
+<div class="section" id="strength-of-weak-ties">
+<h3>Strength of Weak Ties<a class="headerlink" href="#strength-of-weak-ties" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/assort.png"><img alt="_images/assort.png" src="_images/assort.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">“strong friendships” - cross-group links less than half as frequent</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="assortativity">
+<h3>Assortativity<a class="headerlink" href="#assortativity" title="Permalink to this headline">¶</a></h3>
+<p>Is there a tendency of nodes with the same magnitude of the degree to connect to each other, or are large-degree nodes primarily connected to low-degree nodes?</p>
+<blockquote>
+<div><p>Assortativity measures the similarity of connections in the graph with respect to the node degree.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="local-structures">
+<h2>Local Structures<a class="headerlink" href="#local-structures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clustering">
+<h3>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h3>
+<p>Basic idea: how dense is a network at a local level?</p>
+<p>e.g. What fraction of the people who I’m friends with, are friends with each other?</p>
+<p>Clustering looks at if we have a given node <span class="math notranslate nohighlight">\(i\)</span>, and we look at two of <span class="math notranslate nohighlight">\(i\)</span>’s friends j and k, what’s the chance that those two are related to each other?</p>
+<p>Local clustering coefficient:
+For a node <span class="math notranslate nohighlight">\(i\)</span> in graph <span class="math notranslate nohighlight">\(g\)</span>, we have the local clustering coefficient <span class="math notranslate nohighlight">\(Ci(g)\)</span> calculated as:<br />
+<span class="math notranslate nohighlight">\(\#\{\)</span> <span class="math notranslate nohighlight">\(kj\)</span> in <span class="math notranslate nohighlight">\(g\)</span> | <span class="math notranslate nohighlight">\(k, j\)</span> in <span class="math notranslate nohighlight">\(N_i(g)\}\)</span>}<br />
+divided by<br />
+<span class="math notranslate nohighlight">\(\#\{\)</span> <span class="math notranslate nohighlight">\(kj\)</span> | <span class="math notranslate nohighlight">\(k, j\)</span> in <span class="math notranslate nohighlight">\(N_i(g)\}\)</span></p>
+<p>Average clustering coefficient:
+<span class="math notranslate nohighlight">\(C^{avg}(g) ={∑_i C_i(g) \over n}\)</span></p>
+</div>
+<div class="section" id="triads">
+<h3>Triads<a class="headerlink" href="#triads" title="Permalink to this headline">¶</a></h3>
+<p>A triangle is a set of three nodes where each node has a relationship to the other two.</p>
+<blockquote>
+<div><p>In the context of social networks, three individuals <span class="math notranslate nohighlight">\(x, y, z\)</span> such <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> are both friends of <span class="math notranslate nohighlight">\(y\)</span> are called a triad centered at <span class="math notranslate nohighlight">\(y\)</span>.</p>
+</div></blockquote>
+<div class="section" id="triadic-closure">
+<h4>Triadic Closure<a class="headerlink" href="#triadic-closure" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The triad is said to be open if the link from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(z\)</span> is missing. A closed triad centered at <span class="math notranslate nohighlight">\(y\)</span> is a particular triad centered at <span class="math notranslate nohighlight">\(y\)</span> with the additional link from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(z\)</span>. The process of closing an open triad is called
+triadic closure.</p>
+</div></blockquote>
+<p><img alt="TC" src="https://mw2016.museumsandtheweb.com/wp-content/uploads/2016/01/espinos-figure1.png" /></p>
+</div>
+<div class="section" id="transitivity">
+<h4>Transitivity<a class="headerlink" href="#transitivity" title="Permalink to this headline">¶</a></h4>
+<p>Transitivity is the overall probability for the network to have adjacent nodes interconnected, thus revealing the existence of tightly connected communities (or clusters, subgroups, cliques). It is calculated by the ratio between the observed number of closed triplets and the maximum possible number of closed triplets in the graph.</p>
+<p><span class="math notranslate nohighlight">\(T={\# of Triads \over \# of connected Triads}\)</span></p>
+<div class="figure align-default" id="trans">
+<a class="reference internal image-reference" href="_images/trans.png"><img alt="_images/trans.png" src="_images/trans.png" style="height: 350px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="cliques">
+<h3>Cliques<a class="headerlink" href="#cliques" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Cliques are identified by their size k, which is the number of nodes that are present in the clique.</p>
+</div></blockquote>
+<p>A triangle is what we would consider to be a k-clique where k=3.</p>
+<div class="section" id="maximal-cliques">
+<h4>Maximal Cliques<a class="headerlink" href="#maximal-cliques" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>A maximal clique is a clique that cannot be extended by including one more adjacent vertex, meaning it is not a subset of a larger clique. A maximum clique (i.e., clique of the largest size in a given graph) is therefore always maximal, but the converse does not hold.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="motifs">
+<h3>Motifs<a class="headerlink" href="#motifs" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Motifs patterns of interconnections occurring in complex networks at numbers that are significantly higher than those in randomized networks</p>
+</div></blockquote>
+<div class="figure align-default" id="motif">
+<a class="reference internal image-reference" href="_images/motif.jpg"><img alt="_images/motif.jpg" src="_images/motif.jpg" style="height: 350px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Motifs</span><a class="headerlink" href="#motif" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="triad-motifs">
+<h4>Triad Motifs<a class="headerlink" href="#triad-motifs" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-default" id="triad">
+<a class="reference internal image-reference" href="_images/triads.png"><img alt="_images/triads.png" src="_images/triads.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Triad Census</span><a class="headerlink" href="#triad" title="Permalink to this image">¶</a></p>
+</div>
+<p>The triads are numbered 1-16, and have a code associated with them. The code reads like this:</p>
+<ul class="simple">
+<li><p>The first number is the number of bidirectional edges.</p></li>
+<li><p>The second number is the number of single edges.</p></li>
+<li><p>The third number is the number of “non-existent” edges.</p></li>
+</ul>
+<blockquote>
+<div><p>A letter code to distinguish directed variations of the same triad—U for “up,” D for “down,” C for “circle,” and T for “transitive” (i.e., having 2 paths that lead to the same endpoint).</p>
+</div></blockquote>
+<p>Triads 1-3 in the figure are unconnected, triads 4-8 and 11 represent variations on structural holes, and triads 9,10 and 12-16 are variations on closed triads.</p>
+<p>Important triads:</p>
+<ul class="simple">
+<li><p>structural-hole triads (code 201)</p></li>
+<li><p>closed triads (code 300).</p></li>
+</ul>
+<p>The ratio between the structural holes and closed triads is also important—a hierarchy is largely composed of structural holes, while more egalitarian structures would have a higher ratio of closed triads.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="des_nw.html" title="previous page">Descriptive Network Analysis
+</a>
+    <a class='right-next' id="next-link" href="sna_node.html" title="next page">Describing a node</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Yukun<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

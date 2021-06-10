@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>How to define a network? &#8212; NPF SNA Workshop</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/npf-favicon.jpg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using network analysis for your research" href="sna_cp3.html" />
+    <link rel="prev" title="Networks are everywhere" href="sna_cp1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/1.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NPF SNA Workshop</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="content.html">
+   What are networks?
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp1.html">
+     Networks are everywhere
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How to define a network?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_cp3.html">
+     Using network analysis for your research
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="des_nw.html">
+   Descriptive Network Analysis
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_ch4.html">
+     Summarizing a Network
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_node.html">
+     Describing a node
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sna_model.html">
+     Modelling Networks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prac.html">
+   Practical Session: Analyzing NPF Bonusly Network
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/sna_cp2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-formal-definition-of-a-network">
+   A
+   <em>
+    formal
+   </em>
+   definition of a network
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type-of-edges-and-graphs">
+   Type of edges and graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-nodes-and-graphs">
+   Types of nodes and graphs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-of-networks">
+     Application of networks
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how-to-define-a-network">
+<h1>How to define a network?<a class="headerlink" href="#how-to-define-a-network" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs11192-020-03527-0/MediaObjects/11192_2020_3527_Fig1_HTML.png" /></p>
+<div class="section" id="a-formal-definition-of-a-network">
+<h2>A <em>formal</em> definition of a network<a class="headerlink" href="#a-formal-definition-of-a-network" title="Permalink to this headline">¶</a></h2>
+<blockquote class="epigraph">
+<div><p>Networks are just <strong>Graphs</strong> in <a class="reference external" href="https://en.wikipedia.org/wiki/Graph_theory">Graph Theory</a>.</p>
+</div></blockquote>
+<p>Graphs are comprised of two sets of objects:</p>
+<ol class="simple">
+<li><p><strong>A node set</strong>: the “entities” in a graph.</p></li>
+<li><p><strong>An edge set</strong>: the “connections” between the entities in the graph.</p></li>
+</ol>
+<p>Usually, we denote a graph as:</p>
+<div class="math notranslate nohighlight">
+\[
+  G=&lt;V,E&gt;
+\]</div>
+<p><span class="math notranslate nohighlight">\(V\)</span> is the set of vertices and <span class="math notranslate nohighlight">\(E\)</span> is the set of edges. Each edge <span class="math notranslate nohighlight">\(e\)</span> in <span class="math notranslate nohighlight">\(E\)</span> can be represented as <span class="math notranslate nohighlight">\(e_{ij}=(v_i, v_j)\)</span>, where <span class="math notranslate nohighlight">\(v_i\)</span> and <span class="math notranslate nohighlight">\(v_j\)</span> <em>must</em> be included in <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div>
+<div class="section" id="type-of-edges-and-graphs">
+<h2>Type of edges and graphs<a class="headerlink" href="#type-of-edges-and-graphs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Edges might have intensity:
+A tweet can be retweeted 10 times or 10000 times. If we want to distinguish this difference, we have to assign <strong>weights</strong> to the edges.
+Graphs with weighted edges are <strong>weighted graphs</strong>.<br />
+<br></p></li>
+<li><p>Edges might have directions:
+A person might have 10 friends but 10000 followers. Friends mean the person actively follows the other 10 accounts while his/her 10000 followers actively follow him/her. If we want to distinguish the difference, we have to separate the edges directing differently.
+Graphs with directed edges are <strong>directed graphs</strong>.</p></li>
+</ul>
+<div class="figure align-default" id="four-types">
+<a class="reference internal image-reference" href="_images/typesofgraphs.png"><img alt="_images/typesofgraphs.png" src="_images/typesofgraphs.png" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Four Types of Graphs (based on Edge Types)</span><a class="headerlink" href="#four-types" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="types-of-nodes-and-graphs">
+<h2>Types of nodes and graphs<a class="headerlink" href="#types-of-nodes-and-graphs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Nodes can be of different kinds<br />
+Nodes can be grouped into different types and the interactions occur between the groups of nodes. Networks with multiple kinds of nodes are called <strong>multi-modal networks</strong>. The most common one is the bimodal networks, a.k.a., <strong>bipartite</strong>.</p></li>
+</ul>
+<div class="figure align-default" id="bi">
+<a class="reference internal image-reference" href="_images/bimodal.jpeg"><img alt="_images/bimodal.jpeg" src="_images/bimodal.jpeg" style="height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text"><a class="reference external" href="http://social-dynamics.org/projecting-bipartite-network-gephi/">HBO shows and the actors bipartite</a></span><a class="headerlink" href="#bi" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="application-of-networks">
+<h3>Application of networks<a class="headerlink" href="#application-of-networks" title="Permalink to this headline">¶</a></h3>
+<p>This formal definition tells you the basics of every network. When you apply any network analysis techniques to your project, the first thing is to define what’s in your network:</p>
+<ol class="simple">
+<li><p>What does a vertex/node mean in your network?</p>
+<ul class="simple">
+<li><p>humans, tweets, posts, airports, cells, etc.</p></li>
+</ul>
+</li>
+<li><p>What does a connection/edge mean in your network?</p>
+<ul class="simple">
+<li><p>befriending, reposting, replying, citing, flying, interacting, etc.</p></li>
+</ul>
+</li>
+</ol>
+<p>For me, constructing a network is like making up an English sentence where nodes are <em>subjects</em> or <em>objects</em> and edges are the <em>predicates</em>.</p>
+<p>Next, you should consider what node/edge attributes are in your defined network, and should these attributes matter to your research?</p>
+<ol class="simple">
+<li><p>Should I use weighted edges — if so, how?</p>
+<ul class="simple">
+<li><p>What metrics should be used to represent weights?</p></li>
+<li><p>What are the implications of using the metrics?</p></li>
+</ul>
+</li>
+<li><p>Should I use directed edges — if so, how?</p></li>
+<li><p>Can I think of a property in this graph that represents a solution to my problem? If not:</p>
+<ul class="simple">
+<li><p>Can I add properties to the nodes or edges that get me closer?</p></li>
+<li><p>Can I redefine the nodes or edges?</p></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="sna_cp1.html" title="previous page">Networks are everywhere</a>
+    <a class='right-next' id="next-link" href="sna_cp3.html" title="next page">Using network analysis for your research
+</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Yukun<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
