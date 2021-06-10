@@ -1,5 +1,5 @@
 Using network analysis for your research
-![image](https://gsmtasks.com/wp-content/uploads/2019/04/big-data-new.jpg)
+![image](https://www.worklytics.co/images/ONA_networks.jpg)
 =========
 ### Disciplines that use network science
 Abound literature of network analysis are from:
