@@ -1,0 +1,18 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+
+- file: intro
+- file: content
+  sections:
+    - file: sna_cp1.md
+    - file: sna_cp2.md
+    - file: sna_cp3.md
+    # - file: notebooks
+- file: des_nw.md
+  sections:
+    - file: sna_ch4.md
+    # - file: sna_cp5.md
+    - file: sna_node.ipynb
+    - file: sna_model.ipynb
+- file: prac.md
