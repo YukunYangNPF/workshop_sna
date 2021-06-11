@@ -10,9 +10,7 @@ In the last part of this workshop, we will go through the code of analyzing the 
 
 Please open the link: 
 
-https://colab.research.google.com/drive/1_CMrjpqVTjGbk8MeVL6vmfvUEb1mpGZ4?usp=sharing
 
-
-https://colab.research.google.com/drive/1_CMrjpqVTjGbk8MeVL6vmfvUEb1mpGZ4?usp=sharing&offline=true&sandboxMode=true
+https://colab.research.google.com/drive/1_CMrjpqVTjGbk8MeVL6vmfvUEb1mpGZ4?usp=sharing#offline=true&sandboxMode=true
 
 
