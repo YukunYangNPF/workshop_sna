@@ -52,7 +52,7 @@ Tamaddoni-Nezhad, A., Milani, G. A., Raybould, A., Muggleton, S., & Bohan, D. A.
 ```
 
 
-**None-living things can be modeled as networks as well:**
+**Non-living things can be modeled as networks as well:**
 
 - Economic Networks
 ```{figure} images/ch1/financial_networks.png
