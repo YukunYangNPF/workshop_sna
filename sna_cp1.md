@@ -1,6 +1,6 @@
 Networks are everywhere
 ============
-![image](https://lh3.googleusercontent.com/proxy/_vaxh5tsPhMUZe_aOfgFig7aLEcm4t8RdgkTleFQYyttH7NpdnhypaB1hIGysVs6UJiI0NE1RYf_Nc1GD-KYmKRFrUpwjxduiEwNMwUdxrIdRtgC4TYQ_DrBRY_a4A1mdO6MQadS6QbcHXRy5CmhWw3XiYzCxYKVhl7QqJlZKa0P9GG7Dg)
+![image](https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41562-020-0898-6/MediaObjects/41562_2020_898_Fig1_HTML.png)
 ### An *informal* definition of Network
 
 ```{epigraph}
