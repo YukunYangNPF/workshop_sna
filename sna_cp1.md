@@ -1,6 +1,6 @@
 Networks are everywhere
 ============
-![image](https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41562-020-0898-6/MediaObjects/41562_2020_898_Fig1_HTML.png)
+![image](http://scienceandfooducla.files.wordpress.com/2013/02/flavornetwork.png)
 ### An *informal* definition of Network
 
 ```{epigraph}
