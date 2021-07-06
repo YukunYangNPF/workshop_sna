@@ -4,7 +4,7 @@ Describing a node
 
 ## Centrality Measurements
 ```{note}
-Firs of all, how should we define the centrality? Literally, it just indicate the node is "central" to the network, which could indicate some sort of importance, significance, or having a advantaged position. However,  that there are lots of specific ways we can think of centrality, and thus different ways of mathematically defining the concept.
+First of all, how should we define the centrality? Literally, it just indicates the node is "central" to the network, which could indicate some sort of importance, significance, or having a nadvantaged position. However,  that there are lots of specific ways we can think of centrality, and thus different ways of mathematically defining the concept.
  ```
 
  ### Degree Centrality

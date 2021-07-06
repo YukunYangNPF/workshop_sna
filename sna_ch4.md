@@ -88,15 +88,23 @@ By Menger’s theorem, this is equal to the number of node independent paths (pa
 - social competition...
 
 ### Strength of Weak Ties
-```{figure} images/ch4/assort.png
+```{figure} images/ch4/homo.png
 ---
 height: 150px
-name:  path
+name:  homo
 ---
 “strong friendships” - cross-group links less than half as frequent
 ```
 
 ### Assortativity
+```{figure} images/ch4/assort.png
+---
+height: 150px
+name:  path
+---
+Assortatitivy
+```
+
 Is there a tendency of nodes with the same magnitude of the degree to connect to each other, or are large-degree nodes primarily connected to low-degree nodes? 
 
 > Assortativity measures the similarity of connections in the graph with respect to the node degree.
