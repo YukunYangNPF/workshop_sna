@@ -4,6 +4,9 @@ Welcome to the NPF Network Analysis Workshop
 
 Thanks for joining this workshop! ;)
 
+Hi all, the recording for this workshop has been uploaded to Box.
+https://policefoundation.box.com/s/m869rs1lq38zgo3ufuoi4woqbekk8uxw
+
 # Objectives
 This workshop aims at providing a theoretical and empirical introduction to network science and its applications in social sciences. We will talk about:
 - What are networks? What are the ingredients of a network? 
@@ -21,8 +24,6 @@ In a nutshell, this workshop will give you some fundamental flavors of network s
 
 There is no prior knowledge needed for this workshop, but some basic knowledge of Python will be helpful.
 
-Hi all, the recording for this workshop has been uploaded to Box.
-https://policefoundation.box.com/s/m869rs1lq38zgo3ufuoi4woqbekk8uxw
 
 # References
 I have referenced the following materials during the creation of this workshop (if not cited specifically in different sections):
